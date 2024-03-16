@@ -1,0 +1,26 @@
+import pygame
+import sys
+import random
+
+genislik = 600
+yukseklik = 400
+SIYAH = (0, 0, 0)
+KOYU_GRI = (20, 20, 20)
+BLOK_BOYUTU = 20
+FPS = 10
+BASLANGIC_HIZI = 10
+PUAN_ARALIGI = 5
+
+pygame.init()
+ekran = pygame.display.set_mode((genislik, yukseklik))
+pygame.display.set_caption("RAMADAN GAMECODE CAMP")
+saat = pygame.time.Clock()
+
+yilan = [(genislik // 2, yukseklik // 2)]
+yon = (0, 0)
+yem = (random.randint(0, (genislik - BLOK_BOYUTU) // BLOK_BOYUTU) * BLOK_BOYUTU, 
+       random.randint(0, (yukseklik - BLOK_BOYUTU) // BLOK_BOYUTU) * BLOK_BOYUTU)
+
+skor = 0
+seviye = 1
+skor_font = pygame.font.Font(None, 36)
