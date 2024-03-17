@@ -1,1 +1,1 @@
-easy snake game with pygame
+easy snake & drawing game with pygame
